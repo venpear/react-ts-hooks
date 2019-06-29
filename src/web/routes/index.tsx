@@ -2,20 +2,20 @@ import * as React from 'react'
 import { Switch, RouteProps, Route } from 'react-router-dom'
 import Loading from '../components/loading'
 const { lazy, Suspense } = React
-
-const Home = lazy(() => {
+// const Home = req
+const Home = lazy(() => (
   import(/* webpackChunkName:"home" */ "../components/home")
-})
-const Banner = lazy(() => {
+))
+const Banner = lazy(() => (
   import(/* webpackChunkName:"banner" */ "../components/banner")
-})
+))
 const routes: RouteProps[] = [
   {
     path: '/',
     exact: true,
     component: Home
   }, {
-    path: '/home',
+    path: '/banner',
     exact: true,
     component: Banner
   }
